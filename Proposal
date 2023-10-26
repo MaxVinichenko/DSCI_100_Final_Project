@@ -1,0 +1,6 @@
+url <- "https://archive.ics.uci.edu/static/public/45/heart+disease.zip"
+temp <- tempfile()
+download.file(url, temp)
+data <- read.table(unz(temp, "processed.hungarian.data"))
+unlink(temp)
+data
